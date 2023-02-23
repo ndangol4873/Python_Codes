@@ -22,13 +22,13 @@ class User():
             self.amount = int(amount)
         except Exception as e:
             print("PLEASE ENTER NUMBER")
-
-    
         if self.amount > self.balance:
             self.balance = self.balance + self.amount
             print(f"YOUR BALANCE IS :{self.balance} ")
         else:
             print(F"Do NOT HAVE SUFFICIENT BALANCES: {self.balance} ")
+
+
 
     def check_balance(self):
         print(f"YOUR CURRENT BALANCE :{self.balance} ")
