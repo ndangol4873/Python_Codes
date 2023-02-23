@@ -1,6 +1,8 @@
 ## Parent class "User"
 # Holds details about the Users
 
+import re
+
 class User():
     def __init__(self,name,age,gender):
         self.name = name
@@ -14,6 +16,7 @@ class User():
         # print (f"User Details\nName: {self.name}\nage: {self.age}\ngender: {self.gender} ")
 
 
+
     def user_deposit(self, amount):
         try:
             self.amount = int(amount)
@@ -25,10 +28,10 @@ class User():
             self.balance = self.balance + self.amount
             print(f"YOUR BALANCE IS :{self.balance} ")
         else:
-            print(F"Do NOT HAVE SUFFICIENT BALANCS: {self.balance} ")
+            print(F"Do NOT HAVE SUFFICIENT BALANCES: {self.balance} ")
 
     def check_balance(self):
-        print(f"YOUR CURRENCE BALANCE :{self.balance} ")
+        print(f"YOUR CURRENT BALANCE :{self.balance} ")
 
 
 

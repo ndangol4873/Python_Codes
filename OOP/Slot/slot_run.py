@@ -1,8 +1,10 @@
 from guest import User
-from checkin import user_checkin
+from checkin import user_check_in
 
+## PROGRAM RUN SCRIPT
 
 print("Welcome to Slot Game")
-cutomer_option = int(input("Press any number to Continue "))
+customer_option = int(input("Press any number to Continue "))
+Name,Age,Gender = user_check_in(option=customer_option)
+print(Name)
 
-user_checkin(option=cutomer_option)
