@@ -31,7 +31,7 @@ class User():
 
 
     def check_balance(self):
-        print(f"YOUR CURRENT BALANCE : ${self.balance} ")
+        print(f"YOUR CURRENT BALANCE : $ {self.balance} ")
         return self.balance
 
 
