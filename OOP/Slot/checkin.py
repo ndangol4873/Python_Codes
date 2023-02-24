@@ -1,14 +1,16 @@
 from guest import User
 import re
 
+## Guest Check in function
 def user_check_in(option):
-    # if option > 0:
     name = input("Please enter your Full Name : ")
+    name = name.title()
     if re.match("^[a-zA-Z]+(?:\s[a-zA-Z]+)?$", name):
         age = input("Enter your age: ")
         if age.isdigit():
             age = int(age)
             gender = input("Enter your gender: ")
+            gender = gender.title()
             if re.match("^[A-Za-z]+$", gender):
                 user_input = User(name, age, gender)
                 Name,Age,Gender = user_input.show_details()
@@ -22,7 +24,7 @@ def user_check_in(option):
     return Name, Age, Gender,user_balance
 
 
-
+## Guest Deposit Function
 def user_deposit(balance):
     try:
         amount = input("Add Balance to Your Account ")
@@ -32,4 +34,5 @@ def user_deposit(balance):
     if amount > balance:
         balance = balance + amount
         print(f"YOUR BALANCE IS : $ {balance} ")
+        return balance
 
