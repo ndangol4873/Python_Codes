@@ -31,5 +31,5 @@ def user_deposit(balance):
         print("PLEASE ENTER NUMBER")
     if amount > balance:
         balance = balance + amount
-        print(f"YOUR BALANCE IS :{balance} ")
+        print(f"YOUR BALANCE IS : $ {balance} ")
 
